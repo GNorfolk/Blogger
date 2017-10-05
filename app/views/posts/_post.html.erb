@@ -1,0 +1,12 @@
+<p>(<%= post.author %> | <%= post.created_at %>)</p>
+<h2><%= post.title %></h2>
+<p><%= post.body unless action_name == "index" %></p>
+<p>( 
+<%= link_to "Back | ", '../posts' unless action_name == "index" %>
+<%= link_to "Show", post unless action_name == "show" %>
+<%= link_to "Edit", edit_post_url if action_name == "show" %>
+<a href="https://<%= post.link %>">
+	 | Link
+</a>
+ )</p>
+---------------------------------------------
